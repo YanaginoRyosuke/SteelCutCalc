@@ -30,7 +30,7 @@ function handleNumericInput(e: ChangeEvent<HTMLInputElement>, callback: (value: 
 
 export function CutSpecInput({ index, spec, onChange, onDelete }: CutSpecInputProps) {
   return (
-    <div className="flex w-1/2 gap-5 items-end my-2">
+    <div className="flex w-full lg:w-1/2 gap-5 items-end my-2">
       <div>
         <Label htmlFor={`length-${index}`}>切断する長さ (mm)</Label>
         <Input id={`length-${index}`} type="text" value={spec.length} onChange={(e) => handleNumericInput(e, (val) => onChange(index, "length", val))} />
