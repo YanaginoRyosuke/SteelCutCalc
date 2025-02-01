@@ -134,7 +134,7 @@ export default function SteelCuttingCalculator() {
           <Input id="standardLength" type="text" value={standardLength} onChange={handleNumericInput(setStandardLength)} />
         </div>
         <div>
-          <Label htmlFor="bladeThickness">刃の厚み (mm)</Label>
+          <Label htmlFor="bladeThickness">切断の刃幅 (mm)</Label>
           <Input id="bladeThickness" type="text" value={bladeThickness} onChange={handleNumericInput(setBladeThickness)} />
         </div>
 
