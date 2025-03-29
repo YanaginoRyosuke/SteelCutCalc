@@ -11,3 +11,32 @@ body {
     --radius: 0.5rem;
   }
 }
+
+@media print {
+
+  /* 全体を非表示に */
+  body * {
+    visibility: hidden;
+  }
+
+  * {
+    -webkit-print-color-adjust: exact !important;
+    /* Chrome, Safari 用 */
+    print-color-adjust: exact !important;
+    /* 他のブラウザ用 */
+  }
+
+  /* 計算結果部分のみを表示 */
+  .print-result,
+  .print-result * {
+    visibility: visible;
+  }
+
+  /* 計算結果部分を画面上に固定表示 */
+  .print-result {
+    width: 100vw;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
